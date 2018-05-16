@@ -1,0 +1,26 @@
+#!/bin/sh
+
+sudo apt-get install xserver-xorg-input-evdev
+echo "=> xserver installed..\n"
+sudo apt-get install python3-pil python3-pil.imagetk
+echo "=> ImageTk installed..\n"
+sudo apt-get install -y ppp
+echo "=> PPP installed..\n"
+sudo chmod +x ./LCD-show/LCD5-show ./LCD-show/LCD-hdmi
+sudo chmod +x ./GUI5_Landscape.py ./GUI5_Portrait.py
+sudo chmod +x ./PPP/ppp_create ./PPP/ppp_kill ./PPP/ppp_start
+echo "=> File permission's changed..\n"
+
+sudo cp -rf ./LCD-show/usr/share/X11/xorg.conf.d/99-fbturbo.conf-HDMI  /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+sudo cp ./LCD-show/boot/config-nomal.txt /boot/config.txt
+sudo cp ./LCD-show/cmdline.txt /boot/
+sudo cp ./LCD-show/inittab /etc/
+echo "=> HDMI Module Copied"
+
+read -p "Would you like to reboot (y/n)? " response
+if [ "$response" = "y" ];then
+  echo "Reboot Now"
+  sudo reboot
+else
+  echo "Reboot Later.."
+ fi
