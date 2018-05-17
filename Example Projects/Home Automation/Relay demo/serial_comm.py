@@ -44,7 +44,6 @@ class SerialComm(object):
             self._response.append(line)
             if not checkResponse or self.RESPONSE.match(line):
                 # End of response reached; notify waiting thread
-                #print("YHa hua me.................................")
                 self.log.debug('response: %s', self._response)
                 self._responseEvent.set()
         else:
