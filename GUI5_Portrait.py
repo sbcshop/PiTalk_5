@@ -989,8 +989,8 @@ class CreateSMSFrame(tk.Frame):
         """ This fucntion is used for Sending SMS """
         label = tk.Label(self)
         label.grid(row = 0, column = 7)
-        if int(self.recipient.get()):
-            status = phone.sendSMS(int(self.recipient.get()),
+        if self.recipient.get():
+            status = phone.sendSMS(self.recipient.get(),
                                    self.messageBody.get(1.0, "end") )
             if status[-1] == 'OK\r\n':
                 self.recipient.delete(0,"end")
