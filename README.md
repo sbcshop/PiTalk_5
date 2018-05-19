@@ -31,18 +31,25 @@ Modular Smartphone on Raspberry Pi.
    ```
    sudo python3 ./GUI5_Landscape.py ttyS0
    ```
+   or
+   ```
+   ./GUI5_Landscape.py ttyS0
+   ```
    For other version use 'ttyAMA0' if connected through GPIO or 'ttyUSB3' if connected throught USB
-   or 
    ```
    sudo python3 ./GUI5_Portrait.py ttyAMA0
    ```
+   or 
+   ```
+   ./GUI5_Portrait.py ttyAMA0
+   ```
    **Note**: Default it will take 'ttyS0' port. It means if you simply write :
    ```
-   sudo python3 ./GUI5_Portrait.py
+   ./GUI5_Portrait.py
    ```
    or 
    ```
-   sudo python3 ./GUI5_Landscape.py
+   ./GUI5_Landscape.py
    ```
    It will also work but for Raspberry Pi 3 or 3B+ only.
    
