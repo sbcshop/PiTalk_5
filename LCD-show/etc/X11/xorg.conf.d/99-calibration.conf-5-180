@@ -1,6 +1,6 @@
 Section "InputClass"
         Identifier      "calibration"
-        MatchProduct    "ADS7846 Touchscreen"
+        MatchProduct    "WaveShare WS170120"
         Option  "Calibration"   "3905 208 3910 288"
         Option  "SwapAxes"      "0"
 EndSection
