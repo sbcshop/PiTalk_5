@@ -22,7 +22,7 @@ import sys
 class Icon:
     def __init__(self):
         try:
-            for file in sorted(os.listdir('Icons')):
+            for file in sorted(os.listdir(path+'/Icons')):
                 icons.append(tk.PhotoImage(file=path + "/Icons/" + file))
         except:
             pass
